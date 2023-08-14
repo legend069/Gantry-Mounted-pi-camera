@@ -1,2 +1,2 @@
 # Gantry-Mounted-pi-camera
-description - workin progress
+description - work in progress
