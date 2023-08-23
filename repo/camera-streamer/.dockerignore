@@ -1,0 +1,9 @@
+*.o
+*.d
+*.a
+test_*
+tmp/
+.vscode/
+CMakeFiles/
+examples/
+Dockerfile

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8" />
+	<style>body { font-family: monospace; }</style>
+</head>
+
+<body>
+	<hr>
+	<ul>
+		<br>
+		<li>
+			<a href="snapshot"><b>/snapshot</b></a> (JPEG image)<br>
+			<br>
+			<ul>
+				<li>Get a high-resolution snapshot image from the server.</li>
+				<li>Uses resolution specified by <i>-camera-snapshot.height=</i>.</li>
+				<br>
+				<li><a href="snapshot?max_delay=0">/snapshot?max_delay=0</a> to get a snapshot captured exactly now.</li>
+				<li><a href="snapshot?max_delay=300">/snapshot?max_delay=300</a> (default) to get a cached snapshot captured up-to 300 ms in the past.</li>
+			</ul>
+		</li>
+		<br>
+		<li>
+			<a href="stream"><b>/stream</b></a> (MJPEG stream)</b><br>
+			<br>
+			<ul>
+				<li>Get a live stream. Works everywhere, but consumes a ton of bandwidth.</li>
+				<li>Uses resolution specified by <i>-camera-stream.height=</i>.</li>
+			</ul>
+		</li>
+		<br>
+		<li>
+			<a href="webrtc"><b>/webrtc</b></a> (HTTP page / iframe)<br>
+			<br>
+			<ul>
+				<li>Get a live video using WebRTC (low-latency streaming with latency of around 100ms).</li>
+				<li>Uses resolution specified by <i>-camera-video.height=</i>.</li>
+			</ul>
+		</li>
+		<br>
+		<li>
+			<a href="video"><b>/video</b></a> (IP Camera)<br>
+			<br>
+			<ul>
+				<li>Get a live (H264) video stream best suited to current browser in a maximum compatibility mode choosing automatically between one of the below formats.</li>
+				<li>Uses resolution specified by <i>-camera-video.height=</i>.</li>
+				<br>
+				<li><a href="video.mp4"><b>/video.mp4</b></a><br> get a live video stream in MP4 format (Firefox, with latency of around 1s if FFMPEG enabled).</li>
+				<br>
+				<li><a href="video.mkv"><b>/video.mkv</b></a><br> get a live video stream in MKV format (Chrome, with latency of around 2s if FFMPEG enabled).</li>
+				<br>
+				<li><a href="video.m3u8"><b>/video.m3u8</b></a><br> get a live video stream in HLS format (Safari, with latency of around 1s).</li>
+			</ul>
+		</li>
+		<br>
+		<li>
+			<a href="option"><b>/option</b></a><br>
+			<br>
+			<ul>
+				<li>See all configurable options cameras.</li>
+				<br>
+				<li><a href="option?key=value">/option?key=value</a> set <i>key</i> to <i>value</i>.</li>
+				<br>
+				<li><a href="option?AfTrigger=1">/option?AfTrigger=1</a> trigger auto focus for ArduCams.</li>
+			</ul>
+		</li>
+		<br>
+		<li>
+			<a href="status"><b>/status</b></a><br>
+			<br>
+			<ul>
+				<li>See the JSON status of camera-streamer.</li>
+			</ul>
+		</li>
+		<br>
+		<li>
+			The mjpg-streamer compatibility layer:<br>
+			<br>
+			<ul>
+				<li><a href="?action=snapshot">/?action=snapshot</a> as alias to the <a href="snapshot">/snapshot</a>.</li>
+				<li><a href="?action=stream">/?action=stream</a> as alias to the <a href="stream">/stream</a>.</li>
+			</ul>
+		</li>
+	</ul>
+	<br>
+	<hr>
+</body>
+</html>
