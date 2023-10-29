@@ -25,7 +25,8 @@ ExecStart=/usr/local/bin/camera-streamer \
   ; enable continuous autofocus
   -camera-options=AfMode=2 \
   -camera-options=AfRange=2 \
-  -rtsp-port
+  -rtsp-port \
+  --camera-hflip=1 --camera-vflip=1
 
 DynamicUser=yes
 SupplementaryGroups=video i2c
