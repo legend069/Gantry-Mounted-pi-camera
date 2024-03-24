@@ -13,6 +13,8 @@ raw dog - i like to call it raw dog because you're basically raw dogging it.
   strip the very tiny and fragile wires and solder them directly to the PCB.
   is a cheaper for parts. [tips](https://github.com/legend069/Gantry-Mounted-pi-camera/edit/main/README.md#tips-for-soldering-raw-dog)
 
+  note: to help with raw-dog method, i've created a extra [PCB](https://github.com/legend069/Gantry-Mounted-pi-camera/tree/main/gerbers/ready%20to%20order%20files/raw_dog_full_display_port) using this PCB and the normal raw-dog one you only have to cut 1 end of the cable. but since the display port wires get switched inside the cable, you need to figure what end is what before you cut it.
+
 i originally wanted this to be cheap, so i started off with cat5e networking cable. yes this does actually work but only over short distances.<1.5 meter
 
 ## whats the differences between the two?
